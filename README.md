@@ -6,5 +6,5 @@ You should try it, too!
 
 ## State
 
-- Day 1 [x]
+- [x] Day 1
 

@@ -74,7 +74,6 @@ mod tests {
     #[test]
     fn test() {
         let power_of_games = get_power_of_games(INPUT.to_string());
-        println!("BLA {}", power_of_games);
         assert!(power_of_games == 2286);
     }
 }

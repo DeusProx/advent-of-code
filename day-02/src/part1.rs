@@ -29,7 +29,6 @@ fn get_possible_games(input: String, max_cubes: Cubes) -> i32 {
     input.trim()
         .lines()
         .map(|mut line| {
-            println!("Line: {}", line);
             line = line.trim().strip_prefix("Game ").unwrap();
             let (game, draws) = line.split_once(": ").expect("Cannot parse line as a game");
             let game_number = game.parse::<i32>().unwrap();

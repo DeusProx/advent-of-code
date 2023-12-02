@@ -3,3 +3,6 @@
 debug/
 target/
 
+# Remove Cargo.lock from gitignore since we mostly create executables
+Cargo.lock
+

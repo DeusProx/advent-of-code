@@ -14,3 +14,4 @@ path = "src/part1.rs"
 [[bin]]
 name = "p2"
 path = "src/part2.rs"
+

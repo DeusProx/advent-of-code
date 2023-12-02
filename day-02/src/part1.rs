@@ -26,41 +26,35 @@ const MAX_CUBES: Cubes = Cubes {
 };
 
 fn get_possible_games(input: String, max_cubes: Cubes) -> i32 {
-    input.lines()
-        .map(|line| line.trim())
-        .filter(|line| !line.is_empty())
-        .map(|line| {
-            let game_data = line.split(":").collect::<Vec<&str>>();
-            let (game, draws) = (game_data[0], game_data[1]);
-            let game_number = game.split_whitespace()
-                .last().unwrap()
-                .parse::<i32>().unwrap();
+    input.trim()
+        .lines()
+        .map(|mut line| {
+            println!("Line: {}", line);
+            line = line.trim().strip_prefix("Game ").unwrap();
+            let (game, draws) = line.split_once(": ").expect("Cannot parse line as a game");
+            let game_number = game.parse::<i32>().unwrap();
 
-            let is_game_possible = draws.split(";")
-                .map(|draw| {
-                    draw.split(",")
-                        .map(|drawn_cube| drawn_cube.trim())
-                        .map(|drawn_cube| {
-                            let cubes = drawn_cube.split(" ").collect::<Vec<&str>>();
-                            let cube_amount = cubes[0].parse::<i32>().unwrap();
-                            let cube_color = cubes[1];
-                            match cube_color {
-                                "red" => cube_amount <= max_cubes.red,
-                                "green" => cube_amount <= max_cubes.green,
-                                "blue" => cube_amount <= max_cubes.blue,
-                                _ => panic!("\"{}\" is not red, green or blue", cube_color),
-                            }
-                        })
-                        .fold(true, |acc, val| acc && val)
-                })
-                .fold(true, |acc, val| acc && val);
+            let is_game_possible = draws.split("; ")
+                .all(|draw| {
+                    draw.split(", ").all(|drawn_cube| {
+                        let cubes = drawn_cube.split(" ").collect::<Vec<&str>>();
+                        let cube_amount = cubes[0].parse::<i32>().unwrap();
+                        let cube_color = cubes[1];
+                        match cube_color {
+                            "red" => cube_amount <= max_cubes.red,
+                            "green" => cube_amount <= max_cubes.green,
+                            "blue" => cube_amount <= max_cubes.blue,
+                            _ => panic!("\"{}\" is not red, green or blue", cube_color),
+                        }
+                    })
+                });
 
             match is_game_possible {
                 true => game_number,
                 false => 0,
             }
         })
-        .fold(0, |acc, val| acc + val)
+        .sum()
 }
 
 #[cfg(test)]

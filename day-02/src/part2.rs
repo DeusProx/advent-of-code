@@ -32,37 +32,32 @@ impl Cubes {
 }
 
 fn get_power_of_games(input: String) -> i32 {
-    input.lines()
-        .map(|line| line.trim())
-        .filter(|line| !line.is_empty())
+    input.trim()
+        .lines()
         .map(|line| {
-            let game_data = line.split(":").collect::<Vec<&str>>();
-            let (_, draws) = (game_data[0], game_data[1]);
-
-            let min_set: Cubes = draws.split(";")
+            let (_, draws) = line.split_once(": ").expect("Cannot parse line as game");
+            let min_set: Cubes = draws.split("; ")
                 .map(|draw| {
                     let mut red: i32 = 1;
                     let mut green: i32 = 1;
                     let mut blue: i32 = 1;
-                    draw.split(",")
-                        .map(|drawn_cube| drawn_cube.trim())
-                        .for_each(|drawn_cube| {
-                            let cubes = drawn_cube.split(" ").collect::<Vec<&str>>();
-                            let cube_amount = cubes[0].parse::<i32>().unwrap();
-                            let cube_color = cubes[1];
-                            match cube_color {
-                                "red" => red = cube_amount,
-                                "green" => green = cube_amount,
-                                "blue" => blue = cube_amount,
-                                _ => panic!("\"{}\" is not red, green or blue", cube_color),
-                            }
-                        });
+                    draw.split(", ").for_each(|drawn_cube| {
+                        let cubes = drawn_cube.split(" ").collect::<Vec<&str>>();
+                        let cube_amount = cubes[0].parse::<i32>().unwrap();
+                        let cube_color = cubes[1];
+                        match cube_color {
+                            "red" => red = cube_amount,
+                            "green" => green = cube_amount,
+                            "blue" => blue = cube_amount,
+                            _ => panic!("\"{}\" is not red, green or blue", cube_color),
+                        }
+                    });
                     Cubes { red, green, blue }
                 })
                 .fold(Cubes::default(), |acc, val|  acc.min(val));
             min_set.red * min_set.green * min_set.blue
         })
-        .fold(0, |acc, val| acc + val)
+        .sum()
 }
 
 #[cfg(test)]

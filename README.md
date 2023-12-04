@@ -8,7 +8,7 @@ You should try it, too!
 
 - [x] Day 1
 - [x] Day 2
-  - Code felt to expressive. Got some improvements from [reddit](https://www.reddit.com/r/rust/comments/189a5tu/string_manipulation_in_rust_advent_of_code/).
+  - Code felt too expressive. Got some improvements from [reddit](https://www.reddit.com/r/rust/comments/189a5tu/string_manipulation_in_rust_advent_of_code/).
 - [ ] Day 3
   - Only did part 1. Still need to do part 2.
 - [x] Day 4

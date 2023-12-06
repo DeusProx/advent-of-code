@@ -10,10 +10,20 @@ You should try it, too!
 - [x] Day 2
   - Code felt too expressive. Got some improvements from [reddit](https://www.reddit.com/r/rust/comments/189a5tu/string_manipulation_in_rust_advent_of_code/).
 - [ ] Day 3
-  - Only did part 1. Still need to do part 2.
+  - TODO: part 2.
 - [x] Day 4
-- [ ] Day 5
-- [ ] Day 6
+- [x] Day 5
+  - Brute forced part 2 on a 5950x
+  ```bash
+      % time cargo run --release --bin p2
+        Compiling day-05 v0.1.0 (/home/deusprox/git/deusprox/advent-of-code/day-05)
+         Finished release [optimized] target(s) in 0.30s
+          Running `target/release/p2`
+    lowest point: 84206669
+    cargo run --release --bin p2  100,33s user 6,95s system 100% cpu 1:47,09 total
+  ```
+  - TODO: improve part 2 by going the other way around: location -> seed from 0 to u64::MAX
+- [x] Day 6
 - [ ] Day 7
 - [ ] Day 8
 - [ ] Day 9

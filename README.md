@@ -25,7 +25,7 @@ You should try it, too!
   - TODO: improve part 2 by going the other way around: location -> seed from 0 to u64::MAX
 - [x] Day 6
 - [x] Day 7
-- [ ] Day 8
+- [x] Day 8
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 11

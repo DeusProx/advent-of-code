@@ -1,11 +1,1 @@
-fn main() {
-}
-
-#[cfg(test)]
-mod tests {
-
-    #[test]
-    fn test() {
-    }
-}
-
+// Since part2 is always very similiar to part1 please copy it

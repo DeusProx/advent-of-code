@@ -10,10 +10,7 @@ fn main() {
 fn calc(input: String) -> u32 {
     let mut boxes: [Vec<(&str, u32)>; 256] = vec![Vec::new(); 256].try_into().expect("Noooooooooo");
     for seq in input.trim().split(",") {
-//        if seq.contains('-') {
-//            seq.get(seq)
-//            boxes.get(value)
-//        }
+
         if seq.ends_with('-') {
             let label = seq.strip_suffix('-').unwrap();
             let boxx = boxes.get_mut(hash(label)).unwrap();
@@ -35,7 +32,6 @@ fn calc(input: String) -> u32 {
         }
 
     }
-    println!("{:?}", boxes);
 
     boxes.iter().enumerate()
         .map(|(box_index, boxx)| {
@@ -49,7 +45,6 @@ fn calc(input: String) -> u32 {
 fn hash(input: &str) -> usize {
     input.chars()
         .fold(0, |mut acc, c| {
-            //println!("Char: {}, Value: {}", c, c as u32);
             acc += c as usize;
             acc *= 17;
             acc %= 256;

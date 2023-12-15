@@ -2,12 +2,12 @@ use std::fs;
 
 fn main() {
     let input: String = fs::read_to_string("./input").expect("Cannot read input file");
-    let ways_to_beat_record = calc(&input);
-    println!("Result: {}", ways_to_beat_record);
+    let result = calc(input);
+    println!("Result: {}", result);
 }
 
 
-fn calc(input: &str) -> i32 {
+fn calc(input: String) -> i32 {
     input.len() as i32
 }
 
@@ -18,8 +18,8 @@ mod tests {
     #[test]
     fn test() {
         let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
-        let ways_to_beat_record = calc(&input);
-        assert!(ways_to_beat_record == 0);
+        let result = calc(input);
+        assert!(result == 0);
     }
 }
 

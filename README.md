@@ -13,7 +13,7 @@ You should try it, too!
   - TODO: part 2.
 - [x] Day 4
 - [x] Day 5
-  - Brute forced part 2 on a 5950x
+  - Brute forced part 2 on a R9 5950x
   ```bash
       % time cargo run --release --bin p2
         Compiling day-05 v0.1.0 (/home/deusprox/git/deusprox/advent-of-code/day-05)
@@ -34,6 +34,9 @@ You should try it, too!
 - [ ] Day 14
 - [x] Day 15
 - [x] Day 16
+  - Trying out parallelizing with rayon. See `day-16/src/part2.rayon`.
+    - without rayon: ~3.3 seconds
+    - with rayon:    ~0.2 seconds (on a R9 5950x)
 - [ ] Day 17
 - [ ] Day 18
 - [ ] Day 19

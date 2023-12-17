@@ -33,7 +33,7 @@ You should try it, too!
 - [ ] Day 13
 - [ ] Day 14
 - [x] Day 15
-- [ ] Day 16
+- [x] Day 16
 - [ ] Day 17
 - [ ] Day 18
 - [ ] Day 19

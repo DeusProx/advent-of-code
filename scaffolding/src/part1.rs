@@ -1,4 +1,4 @@
-use std::fs;
+use std::{fs, time::Instant};
 
 fn main() {
     let input: String = fs::read_to_string("./input").expect("Cannot read input file");
@@ -8,7 +8,13 @@ fn main() {
 
 
 fn calc(input: String) -> i32 {
-    input.len() as i32
+    let now = Instant::now();
+    let len = input.len() as i32;
+
+    let elapsed = now.elapsed();
+    println!("Time: {} μs (~{} ms)", elapsed.as_micros(), elapsed.as_millis());
+
+    len
 }
 
 #[cfg(test)]

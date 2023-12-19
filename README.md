@@ -38,7 +38,7 @@ You should try it, too!
     - without rayon: ~3.3 seconds
     - with rayon:    ~0.2 seconds (on a R9 5950x)
 - [x] Day 17
-- [ ] Day 18
+- [x] Day 18
 - [ ] Day 19
 - [ ] Day 20
 - [ ] Day 21

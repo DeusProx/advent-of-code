@@ -37,7 +37,7 @@ You should try it, too!
   - Trying out parallelizing with rayon. See `day-16/src/part2.rayon`.
     - without rayon: ~3.3 seconds
     - with rayon:    ~0.2 seconds (on a R9 5950x)
-- [ ] Day 17
+- [x] Day 17
 - [ ] Day 18
 - [ ] Day 19
 - [ ] Day 20

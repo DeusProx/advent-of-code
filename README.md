@@ -39,7 +39,8 @@ You should try it, too!
     - with rayon:    ~0.2 seconds (on a R9 5950x)
 - [x] Day 17
 - [x] Day 18
-- [ ] Day 19
+- [x] Day 19
+    - Hard one since I had to rewrite everything to ranges in part 2, but solution is very fast
 - [ ] Day 20
 - [ ] Day 21
 - [ ] Day 22

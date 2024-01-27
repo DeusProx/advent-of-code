@@ -29,7 +29,7 @@ You should try it, too!
 - [x] Day 9
 - [ ] Day 10
 - [x] Day 11
-- [ ] Day 12
+- [x] Day 12 - part 2 is a dynamic programming problem. Great refresher.
 - [ ] Day 13
 - [ ] Day 14
 - [x] Day 15

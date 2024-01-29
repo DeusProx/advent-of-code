@@ -30,7 +30,7 @@ You should try it, too!
 - [ ] Day 10
 - [x] Day 11
 - [x] Day 12 - part 2 is a dynamic programming problem. Great refresher.
-- [ ] Day 13
+- [x] Day 13
 - [ ] Day 14
 - [x] Day 15
 - [x] Day 16

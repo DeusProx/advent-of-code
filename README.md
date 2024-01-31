@@ -31,7 +31,7 @@ You should try it, too!
 - [x] Day 11
 - [x] Day 12 - part 2 is a dynamic programming problem. Great refresher.
 - [x] Day 13
-- [ ] Day 14
+- [x] Day 14
 - [x] Day 15
 - [x] Day 16
   - Trying out parallelizing with rayon. See `day-16/src/part2.rayon`.

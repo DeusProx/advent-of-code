@@ -8,7 +8,10 @@ I decided I want to learn Rust with [advent of code 2023](https://adventofcode.c
 
 You should try it, too!
 
-## State
+## Progress
+
+I'm done with advent of code 2023 like you can see in aboves gif, but I haven't pushed all the code yet.
+I will push it once I improved it a bit.
 
 - [x] Day 1
 - [x] Day 2

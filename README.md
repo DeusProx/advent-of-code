@@ -1,7 +1,11 @@
 # Advent of Code
 
-I decided I want to train a bit Rust with this years (2023) [advent of code](https://adventofcode.com/).
-I don't know yet how far I get, but at least I started it.
+I decided I want to learn Rust with [advent of code 2023](https://adventofcode.com/2023).
+
+<div align='center'>
+    <img src='./advent-of-code-2023.gif' alt='Advent of Code 2023 - All Puzzles done!' />
+</div>
+
 You should try it, too!
 
 ## State

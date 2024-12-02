@@ -6,3 +6,6 @@ target/
 # Remove Cargo.lock from gitignore since we mostly create executables
 Cargo.lock
 
+# Do not store puzzle data in public repo
+data/
+

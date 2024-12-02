@@ -1,3 +1,25 @@
+pub fn day2_part1() -> u32 {
+    // TODO: macro
+    let input = std::fs::read_to_string("../data/2024/day/2/input").expect("Cannot read input");
+    let count = input.lines()
+        .map(|line: &str| Report::parse(line))
+        .map(|report: Report| report.is_valid())
+        .filter(|entry: &Safety| matches!(entry, Safety::Safe))
+        .count();
+    count as u32
+}
+
+pub fn day2_part2() -> u32 {
+    // TODO: macro
+    let input = std::fs::read_to_string("../data/2024/day/2/input").expect("Cannot read input");
+    let count = input.lines()
+        .map(|line: &str| Report::parse(line))
+        .map(|report: Report| report.is_valid_dampened())
+        .filter(|entry: &Safety| matches!(entry, Safety::Safe))
+        .count();
+    count as u32
+}
+
 #[derive(Debug)]
 pub enum Safety {
     Safe,
@@ -53,26 +75,3 @@ impl Report {
         }
     }
 }
-
-pub fn day2_part1() -> u32 {
-    // TODO: macro
-    let input = std::fs::read_to_string("../data/2024/day/2/input").expect("Cannot read input");
-    let count = input.lines()
-        .map(|line: &str| Report::parse(line))
-        .map(|report: Report| report.is_valid())
-        .filter(|entry: &Safety| matches!(entry, Safety::Safe))
-        .count();
-    count as u32
-}
-
-pub fn day2_part2() -> u32 {
-    // TODO: macro
-    let input = std::fs::read_to_string("../data/2024/day/2/input").expect("Cannot read input");
-    let count = input.lines()
-        .map(|line: &str| Report::parse(line))
-        .map(|report: Report| report.is_valid_dampened())
-        .filter(|entry: &Safety| matches!(entry, Safety::Safe))
-        .count();
-    count as u32
-}
-

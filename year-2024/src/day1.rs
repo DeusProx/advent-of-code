@@ -52,3 +52,4 @@ pub fn day1_part2() -> u32 {
         .map(|number| number * right_count.get(number).unwrap_or(&0))
         .sum()
 }
+

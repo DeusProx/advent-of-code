@@ -1,3 +1,6 @@
+use std::time::Instant;
+
+#[aoc_macro::bench()]
 pub fn day2_part1() -> u32 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/2/input").expect("Cannot read input");
@@ -9,6 +12,7 @@ pub fn day2_part1() -> u32 {
     count as u32
 }
 
+#[aoc_macro::bench()]
 pub fn day2_part2() -> u32 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/2/input").expect("Cannot read input");
@@ -75,3 +79,4 @@ impl Report {
         }
     }
 }
+

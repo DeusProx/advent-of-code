@@ -8,3 +8,5 @@ name = "aoc_days"
 path = "src/lib.rs"
 
 [dependencies]
+aoc-macro = { path = "../tools/aoc-macro" }
+

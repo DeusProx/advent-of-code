@@ -4,9 +4,17 @@ use aoc_days::{
 };
 
 fn main() {
-    println!("day  1, part 1: {}", day1_part1());
-    println!("day  1, part 2: {}", day1_part2());
+    println!("Day 1");
+    println!("  Part 1");
+    day1_part1();
+    println!("  Part 2");
+    day1_part2();
+    println!();
 
-    println!("day  2, part 1: {}", day2_part1());
-    println!("day  2, part 2: {}", day2_part2());
+    println!("Day 2");
+    println!("  Part 1");
+    day2_part1();
+    println!("  Part 2");
+    day2_part2();
+    println!();
 }

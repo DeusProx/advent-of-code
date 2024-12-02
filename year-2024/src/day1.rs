@@ -1,5 +1,7 @@
+use std::time::Instant;
 use std::collections::HashMap;
 
+#[aoc_macro::bench()]
 pub fn day1_part1() -> u32 {
     // TODO: Solve with macro
     let input = std::fs::read_to_string("../data/2024/day/1/input").expect("Cannot read input");
@@ -23,6 +25,7 @@ pub fn day1_part1() -> u32 {
         .sum()
 }
 
+#[aoc_macro::bench()]
 pub fn day1_part2() -> u32 {
     // TODO: Solve with macro
     let input = std::fs::read_to_string("../data/2024/day/1/input").expect("Cannot read input");

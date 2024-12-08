@@ -10,6 +10,7 @@ path = "src/lib.rs"
 [dependencies]
 aoc-macro = { path = "../tools/aoc-macro" }
 crossterm = "0.28.1"
+rayon = "1.10.0"
 
 [[bin]]
 name = "day6_runner"

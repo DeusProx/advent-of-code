@@ -42,12 +42,16 @@ fn main() {
     day5_part1();
     println!("  Part 2");
     day5_part2();
+    println!();
+
 
     println!("Day 6");
     println!("  Part 1");
     day6_part1();
     println!("  Part 2");
     day6_part2();
+    println!();
+
 
     println!("Day 7");
     println!("  Part 1");
@@ -56,5 +60,7 @@ fn main() {
     day7_part2();
     println!("  Part 2 (Rayon)");
     day7_part2_rayon();
+    println!();
+
 }
 

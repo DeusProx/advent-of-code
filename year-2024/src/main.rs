@@ -5,6 +5,7 @@ use aoc_days::{
     day4::{day4_part1, day4_part2},
     day5::{day5_part1, day5_part2},
     day6::{day6_part1, day6_part2},
+    day7::{day7_part1, day7_part2, day7_part2_rayon},
 };
 
 fn main() {
@@ -47,4 +48,13 @@ fn main() {
     day6_part1();
     println!("  Part 2");
     day6_part2();
+
+    println!("Day 7");
+    println!("  Part 1");
+    day7_part1();
+    println!("  Part 2");
+    day7_part2();
+    println!("  Part 2 (Rayon)");
+    day7_part2_rayon();
 }
+

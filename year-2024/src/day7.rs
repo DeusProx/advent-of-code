@@ -65,11 +65,18 @@ fn calc(result: &u64, numbers: &Vec<u64>, operators: &Vec<Operator>, operator: &
             let value = match operator {
                 Operator::Add => value + numbers[position],
                 Operator::Multiply => value * numbers[position],
-                Operator::Concat => value * (10 as u64).pow(numbers[position].to_string().len() as u32) + numbers[position]
+                Operator::Concat => value * (10 as u64).pow(integer_digit(numbers[position])) + numbers[position]
             };
 
             operators.iter().any(|operator| calc(result, numbers, operators, operator, position, value))
         },
+    }
+}
+
+fn integer_digit(value: u64) -> u32 {
+    match value / 10 {
+        0 => 1,
+        n => integer_digit(n),
     }
 }
 

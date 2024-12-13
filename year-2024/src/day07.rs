@@ -76,7 +76,7 @@ fn calc(result: &u64, numbers: &Vec<u64>, operators: &Vec<Operator>, operator: &
 fn integer_digit(value: u64) -> u32 {
     match value / 10 {
         0 => 1,
-        n => integer_digit(n),
+        n => integer_digit(n) + 1,
     }
 }
 

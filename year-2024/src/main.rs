@@ -75,5 +75,12 @@ fn main() {
     println!("  Part 2");
     day9_part2();
     println!();
+
+    println!("Day 11");
+    println!("  Part 1");
+    aoc_days::day11::part1();
+    println!("  Part 2");
+    aoc_days::day11::part2();
+    println!();
 }
 

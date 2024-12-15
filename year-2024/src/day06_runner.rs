@@ -1,6 +1,6 @@
 use std::io::Write;
 use crossterm::{cursor, event::{self, Event, KeyCode, KeyEvent, KeyEventKind}, execute, queue, style, terminal::{self, ClearType}};
-use aoc_days::day6::Guard;
+use days::day06::Guard;
 
 fn main() -> std::io::Result<()>{
     let mut stdout = std::io::stdout();

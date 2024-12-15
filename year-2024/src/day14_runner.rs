@@ -1,6 +1,6 @@
 use std::io::Write;
 use crossterm::{cursor, event, execute, queue, style, terminal};
-use aoc_days::day14::{Robot, Size};
+use days::day14::{Robot, Size};
 
 fn main() -> std::io::Result<()>{
     let mut stdout = std::io::stdout();

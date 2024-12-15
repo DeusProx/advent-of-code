@@ -4,7 +4,7 @@ use std::time::Instant;
 use rayon::prelude::*;
 
 #[aoc_macro::bench()]
-pub fn day7_part1() -> u64 {
+pub fn part1() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/7/input").expect("Cannot read input");
     let operators = vec![Operator::Add, Operator::Multiply];
@@ -16,7 +16,7 @@ pub fn day7_part1() -> u64 {
 }
 
 #[aoc_macro::bench()]
-pub fn day7_part2() -> u64 {
+pub fn part2() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/7/input").expect("Cannot read input");
     let operators = vec![Operator::Add, Operator::Multiply, Operator::Concat];
@@ -28,7 +28,7 @@ pub fn day7_part2() -> u64 {
 }
 
 #[aoc_macro::bench()]
-pub fn day7_part2_rayon() -> u64 {
+pub fn part2_rayon() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/7/input").expect("Cannot read input");
     let operators = vec![Operator::Add, Operator::Multiply, Operator::Concat];

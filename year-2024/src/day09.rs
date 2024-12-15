@@ -2,7 +2,7 @@ use std::{cmp::Ordering, iter, time::Instant};
 
 
 #[aoc_macro::bench()]
-pub fn day9_part1() -> u64 {
+pub fn part1() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/9/input").expect("Cannot read input");
 
@@ -104,7 +104,7 @@ impl Block {
 // damn this code is ugly
 // just wanted to get done at this point
 #[aoc_macro::bench()]
-pub fn day9_part2() -> u64 {
+pub fn part2() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/9/input").expect("Cannot read input");
     let mut files: Vec<(usize, u64)> = Vec::with_capacity(input.len());

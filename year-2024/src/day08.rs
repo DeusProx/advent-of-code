@@ -1,7 +1,7 @@
 use std::{collections::HashSet, ops::{Add, Sub}, time::Instant};
 
 #[aoc_macro::bench()]
-pub fn day8_part1() -> u32 {
+pub fn part1() -> u32 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/8/input").expect("Cannot read input");
 
@@ -34,7 +34,7 @@ pub fn day8_part1() -> u32 {
 }
 
 #[aoc_macro::bench()]
-pub fn day8_part2() -> u32 {
+pub fn part2() -> u32 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/8/input").expect("Cannot read input");
 

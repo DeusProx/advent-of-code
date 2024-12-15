@@ -5,13 +5,12 @@ pub fn part1() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/11/input").expect("Cannot read input");
 
-    let mut cache: StoneCache = StoneCache(HashMap::new());
-
     let stones: Vec<u64> = input
         .trim()
         .split(' ')
         .map(|c| c.parse::<u64>().unwrap()).collect();
 
+    let mut cache: StoneCache = StoneCache(HashMap::new());
     stones.iter()
         .map(|&stone| blink(stone, 25, &mut cache))
         .sum()
@@ -22,13 +21,12 @@ pub fn part2() -> u64 {
     // TODO: macro
     let input = std::fs::read_to_string("../data/2024/day/11/input").expect("Cannot read input");
 
-    let mut cache: StoneCache = StoneCache(HashMap::new());
-
     let stones: Vec<u64> = input
         .trim()
         .split(' ')
         .map(|c| c.parse::<u64>().unwrap()).collect();
 
+    let mut cache: StoneCache = StoneCache(HashMap::new());
     stones.iter()
         .map(|&stone| blink(stone, 75, &mut cache))
         .sum()

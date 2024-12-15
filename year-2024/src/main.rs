@@ -96,5 +96,15 @@ fn main() {
     println!("  Part 2");
     aoc_days::day13::part2();
     println!();
+
+    println!("Day 14");
+    println!("  Part 1");
+    aoc_days::day14::part1();
+    println!("  Part 2");
+    println!("    Done graphically");
+    println!("    See day14_runner binary");
+    println!("    Solution: 6446 (for my input)");
+    println!("    Time: A good one");
+    println!();
 }
 

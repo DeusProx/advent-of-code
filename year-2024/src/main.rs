@@ -94,5 +94,12 @@ fn main() {
     println!("    Solution: 6446 (for my input)");
     println!("    Time: a good one");
     println!();
+
+    println!("Day 15");
+    println!("  Part 1");
+    days::day15::part1();
+    println!("  Part 2");
+    days::day15::part2();
+    println!();
 }
 

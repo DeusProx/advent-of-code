@@ -1,7 +1,7 @@
 use std::{fs, char, collections::HashMap};
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/7/input").expect("Cannot read input file");
     let result = calc_ways_to_beat_the_record(&input);
     println!("Result: {}", result);
     assert!(result == 253866470);
@@ -159,7 +159,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/7/testinput").expect("Cannot read input file");
         let ways_to_beat_record = calc_ways_to_beat_the_record(&input);
         assert!(ways_to_beat_record == 6440);
     }

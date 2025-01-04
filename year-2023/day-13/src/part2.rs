@@ -2,7 +2,7 @@ use std::{fs, time::Instant};
 use itertools::Itertools;
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/13/input").expect("Cannot read input file");
     let result = calc(input);
     println!("Result: {:?}", result);
     assert!(result == 33183);
@@ -71,7 +71,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/13/testinput").expect("Cannot read input file");
         let result = calc(input);
         println!("{:?}", result);
         assert!(result == 400);

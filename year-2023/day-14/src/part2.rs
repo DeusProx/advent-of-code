@@ -1,7 +1,7 @@
 use std::{fs, time::Instant, collections::HashMap};
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/14/input").expect("Cannot read input file");
     let result = calc(input, 1_000_000_000);
     println!("Result: {}", result);
     assert_eq!(result, 104815);
@@ -153,14 +153,14 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/14/testinput").expect("Cannot read input file");
         let result = calc(input, 1_000_000_000);
         assert_eq!(result, 64);
     }
 
     #[test]
     fn rotation_test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/14/testinput").expect("Cannot read input file");
 
         let mut grid = Grid::parse(input.clone());
         grid.rotate_right();

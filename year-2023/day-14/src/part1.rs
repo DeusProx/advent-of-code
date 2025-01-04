@@ -1,7 +1,7 @@
 use std::{fs, time::Instant};
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/14/input").expect("Cannot read input file");
     let result = calc(input);
     println!("Result: {}", result);
     assert_eq!(result, 107142);
@@ -121,11 +121,9 @@ fn calc(input: String) -> i32 {
     let now = Instant::now();
 
     let mut grid = Grid::parse(input);
-    println!("Grid:\n{}", grid);
 
     grid.rotate_left();
     grid.tilt();
-    println!("Grid:\n{}", grid);
 
     let load = grid.load();
 
@@ -141,7 +139,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/14/testinput").expect("Cannot read input file");
         let result = calc(input);
         assert_eq!(result, 136);
     }

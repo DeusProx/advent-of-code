@@ -4,7 +4,7 @@ use std::{fs, time::Instant};
 // checks if the combinations are valid
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/12/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
     assert_eq!(result, 6_949);
@@ -86,7 +86,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/12/testinput").expect("Cannot read input file");
         let result = calc(&input);
         assert_eq!(result, 21);
     }

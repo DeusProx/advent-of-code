@@ -1,7 +1,7 @@
 use std::{fs, time::Instant, collections::{VecDeque, HashMap}};
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/17/input").expect("Cannot read input file");
     let result = calc(input);
     println!("Result: {}", result);
     assert!(result == 1238)
@@ -120,7 +120,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/17/testinput").expect("Cannot read input file");
         let result = calc(input);
         assert!(result == 102);
     }

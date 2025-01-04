@@ -1,15 +1,7 @@
-use std::process::Command;
+use std::fs;
 
 fn main() {
-    let curl_output = Command::new("curl")
-        .arg("-X")
-        .arg("GET")
-        .arg("-H")
-        .arg(format!("Cookie: session={}", std::env::var("AOC_SESSION").expect("AOC_SESSION should be set in env")))
-        .arg("https://adventofcode.com/2023/day/1/input")
-        .output()
-        .expect("Cannot download puzzle input");
-    let input = String::from_utf8(curl_output.stdout).expect("Cannot parse puzzle input");
+    let input: String = fs::read_to_string("../../data/2023/day/1/input").expect("Cannot read input file");
     let output = calculate_calibration(input);
     println!("Number:\n{output}");
 }
@@ -62,19 +54,11 @@ fn calculate_calibration(input: String) -> u32 {
 #[cfg(test)]
 mod tests {
     use super::calculate_calibration;
-    const INPUT: &str = r#"
-        two1nine
-        eightwothree
-        abcone2threexyz
-        xtwone3four
-        4nineeightseven2
-        zoneight234
-        7pqrstsixteen
-    "#;
 
     #[test]
     fn calculates() {
-        let output = calculate_calibration(INPUT.to_string());
+        let input: String = std::fs::read_to_string("../../data/2023/day/1/testinput2").expect("Cannot read input file");
+        let output = calculate_calibration(input.to_string());
         assert!(output == 281);
     }
 }

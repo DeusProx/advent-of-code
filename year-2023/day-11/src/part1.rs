@@ -3,7 +3,7 @@ use std::{fs, time::Instant, str::Chars, iter::repeat};
 // Hint: Manhatten distance can be used to calc the distance between the galaxies
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/11/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
     assert_eq!(result, 9_723_824);
@@ -111,21 +111,21 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/11/testinput").expect("Cannot read input file");
         let result = calc(&input);
         assert_eq!(result, 374);
     }
 
     #[test]
     fn test_universe_expansion() {
-        let input: String = std::fs::read_to_string("./test").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/11/testinput").expect("Cannot read input file");
         let galaxies = parse_galaxies(&input);
         let empty_columns = empty_lines(&input);
         let empty_rows = empty_lines(&transpose(&input));
 
         let galaxies_expanded = expand_universe(&galaxies, &empty_columns, &empty_rows, 2);
 
-        let input_expanded: String = std::fs::read_to_string("./test_expanded").expect("Cannot read input file");
+        let input_expanded: String = std::fs::read_to_string("../../data/2023/day/11/testinput_expanded").expect("Cannot read input file");
         let galaxies_expanded_input: Vec<Point> = parse_galaxies(&input_expanded);
 
         assert_eq!(galaxies_expanded, galaxies_expanded_input);

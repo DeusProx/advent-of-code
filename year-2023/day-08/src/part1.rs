@@ -1,7 +1,7 @@
 use std::{fs, collections::HashMap};
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/8/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
 }
@@ -62,7 +62,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./test1").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/8/testinput").expect("Cannot read input file");
         let result = calc(&input);
         assert!(result == 2);
     }

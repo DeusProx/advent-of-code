@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let input: String = fs::read_to_string("./input").expect("Cannot read input file");
+    let input: String = fs::read_to_string("../../data/2023/day/6/input").expect("Cannot read input file");
     let ways_to_beat_record = calc_ways_to_beat_the_record(&input);
     println!("ways to beat records: {}", ways_to_beat_record);
 }
@@ -43,7 +43,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let input: String = std::fs::read_to_string("./testInput").expect("Cannot read input file");
+        let input: String = std::fs::read_to_string("../../data/2023/day/6/testinput").expect("Cannot read input file");
         let ways_to_beat_record = calc_ways_to_beat_the_record(&input);
         assert!(ways_to_beat_record == 71503);
     }

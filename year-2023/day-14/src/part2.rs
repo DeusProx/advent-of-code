@@ -1,7 +1,7 @@
-use std::{fs, time::Instant, collections::HashMap};
+use std::{time::Instant, collections::HashMap};
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/14/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/14/input").expect("Cannot read input file");
     let result = calc(input, 1_000_000_000);
     println!("Result: {}", result);
     assert_eq!(result, 104815);

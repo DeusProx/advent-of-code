@@ -1,9 +1,9 @@
-use std::{fs, time::Instant, str::Chars, iter::repeat};
+use std::{time::Instant, str::Chars, iter::repeat};
 
 // Hint: the same as before, but we need i64 instead of i32 and you can set the expansion coefficient in the calc function
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/11/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/11/input").expect("Cannot read input file");
     let result = calc(&input, 1_000_000);
     println!("Result: {}", result);
     assert_eq!(result, 731_244_261_352);

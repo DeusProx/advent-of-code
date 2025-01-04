@@ -1,9 +1,9 @@
-use std::{fs, time::Instant, str::Chars, iter::repeat};
+use std::{time::Instant, str::Chars, iter::repeat};
 
 // Hint: Manhatten distance can be used to calc the distance between the galaxies
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/11/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/11/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
     assert_eq!(result, 9_723_824);

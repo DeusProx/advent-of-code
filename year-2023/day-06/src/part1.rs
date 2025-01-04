@@ -1,7 +1,5 @@
-use std::fs;
-
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/6/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/6/input").expect("Cannot read input file");
     let ways_to_beat_record = calc_ways_to_beat_the_record(&input);
     println!("ways to beat records: {}", ways_to_beat_record);
 }

@@ -1,8 +1,8 @@
-use std::{fs, time::Instant};
+use std::time::Instant;
 use itertools::Itertools;
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/13/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/13/input").expect("Cannot read input file");
     let result = calc(input);
     println!("Result: {:?}", result);
     assert!(result == 33183);

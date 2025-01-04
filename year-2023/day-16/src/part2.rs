@@ -1,7 +1,7 @@
-use std::{fs, collections::{VecDeque, HashMap}, time::Instant};
+use std::{collections::{VecDeque, HashMap}, time::Instant};
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/16/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/16/input").expect("Cannot read input file");
     let result = calc(input);
     println!("Result: {}", result);
     assert!(result == 7493);

@@ -1,7 +1,7 @@
-use std::{fs, time::Instant, cmp::Ordering, collections::HashMap, ops::Range};
+use std::{time::Instant, cmp::Ordering, collections::HashMap, ops::Range};
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/19/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/19/input").expect("Cannot read input file");
     let result = calc(input);
     println!("Result: {}", result);
     assert!(result == 130_090_458_884_662);

@@ -1,7 +1,5 @@
-use std::fs;
-
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/15/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/15/input").expect("Cannot read input file");
     let result = hash(input);
     println!("Result: {}", result);
 }

@@ -1,4 +1,4 @@
-use std::{fs, time::Instant, collections::HashMap};
+use std::{time::Instant, collections::HashMap};
 use rayon::prelude::*;
 
 // Hint:
@@ -9,7 +9,7 @@ use rayon::prelude::*;
 //   - Alternative: Sliding window?
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/12/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/12/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
     assert_eq!(result, 51456609952403);

@@ -1,7 +1,7 @@
-use std::{fs, collections::HashMap};
+use std::collections::HashMap;
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/8/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/8/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
 }

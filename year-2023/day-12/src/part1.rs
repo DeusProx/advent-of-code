@@ -1,10 +1,10 @@
-use std::{fs, time::Instant};
+use std::time::Instant;
 
 // Brute force algorithm which recursively replaces unknown elements and
 // checks if the combinations are valid
 
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/12/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/12/input").expect("Cannot read input file");
     let result = calc(&input);
     println!("Result: {}", result);
     assert_eq!(result, 6_949);

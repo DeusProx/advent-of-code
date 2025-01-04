@@ -1,7 +1,5 @@
-use std::fs;
-
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/2/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/2/input").expect("Cannot read input file");
     let output = get_power_of_games(input);
     println!("Games possible:\n{output}");
 }

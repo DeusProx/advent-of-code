@@ -1,7 +1,5 @@
-use std::fs;
-
 fn main() {
-    let input: String = fs::read_to_string("../../data/2023/day/1/input").expect("Cannot read input file");
+    let input: String = std::fs::read_to_string("../../data/2023/day/1/input").expect("Cannot read input file");
     let output = calculate_calibration(input);
     println!("Number:\n{output}");
 }

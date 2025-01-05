@@ -82,10 +82,10 @@ impl Computer {
                 break;
             };
 
-            let oselfode = self.program[index];
+            let opcode = self.program[index];
             let operand = self.program[index + 1];
 
-            match oselfode {
+            match opcode {
                 0 => self.registers[0] = self.registers[0] >> self.combo_operand(operand),
                 1 => self.registers[1] = self.registers[1] ^ operand,
                 2 => self.registers[1] = self.combo_operand(operand) & 7,

@@ -101,5 +101,11 @@ fn main() {
     println!("  Part 2");
     days::day15::part2();
     println!();
-}
 
+    println!("Day 17");
+    println!("  Part 1");
+    days::day17::part1();
+    println!("  Part 2");
+    days::day17::part2();
+    println!();
+}

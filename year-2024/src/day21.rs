@@ -10,41 +10,44 @@ pub fn part1() -> u32 {
         .map(|line|
             [NKey::A].into_iter()
                 .chain(line.chars().map(NKey::from))
-
-            .collect::<Vec<NKey>>()
+                .collect::<Vec<NKey>>()
         )
         .collect();
 
     let dkeys: Vec<Vec<DKey>> = nkeys.iter()
-        .map(|line|
+        .map(|line| {
+            let movement_sequence = line
+                .windows(2)
+                .map(|a| a[0].move_to(a[1]))
+                .flatten()
+                .into_iter();
+
             [DKey::A].into_iter()
-                .chain(
-                    line
-                        .windows(2)
-                        .map(|a| a[0].move_to(a[1]))
-                        .flatten()
-                        .into_iter()
-                ).collect::<Vec<DKey>>()
-        )
+                .chain(movement_sequence)
+                .collect::<Vec<DKey>>()
+        })
         .collect();
 
     let dkeys: Vec<Vec<DKey>> = dkeys.iter()
-        .map(|line|
+        .map(|line| {
+            let movement_sequence = line
+                .windows(2)
+                .map(|a| a[0].move_to(a[1]))
+                .flatten()
+                .into_iter();
+
             [DKey::A].into_iter()
-                .chain(
-                    line
-                        .windows(2)
-                        .map(|a| a[0].move_to(a[1]))
-                        .flatten()
-                        .into_iter()
-                ).collect::<Vec<DKey>>()
-        )
+                .chain(movement_sequence)
+                .collect::<Vec<DKey>>()
+        })
         .collect();
 
     let dkeys: Vec<Vec<DKey>> = dkeys.iter()
         .map(|line| line
             .windows(2)
-            .map(|a| a[0].move_to(a[1])).flatten().collect::<Vec<DKey>>()
+            .map(|a| a[0].move_to(a[1]))
+            .flatten()
+            .collect::<Vec<DKey>>()
         )
         .collect();
 
@@ -55,6 +58,7 @@ pub fn part1() -> u32 {
 }
 
 trait MoveTo<Rhs=Self> {
+    // find shortest sequence of directional keys to be used to move from one button to another
     fn move_to(self, target_key: Self) -> impl Iterator<Item=DKey>;
 }
 
@@ -218,14 +222,13 @@ pub fn part2() -> usize {
 
     let dkeys: Vec<Vec<DKey>> = nkeys.iter()
         .map(|line| {
-            let x = line
+            let movement_sequence = line
                 .windows(2)
                 .map(|a| a[0].move_to(a[1]))
                 .flatten()
                 .into_iter();
-
             [DKey::A].into_iter()
-                .chain(x)
+                .chain(movement_sequence)
                 .collect::<Vec<DKey>>()
         })
         .collect();
@@ -243,8 +246,8 @@ pub fn part2() -> usize {
 fn min_seq_len(dkeys: &Vec<Vec<DKey>>, level: usize) -> Vec<usize> {
     let mut maps: Vec<HashMap<(DKey, DKey), usize>> = vec![HashMap::with_capacity(25); level];
     let dkeys: Vec<usize> = dkeys.into_iter()
-        .map(
-            |line| line.into_iter()
+        .map(|line|
+            line.into_iter()
                 .map_windows(|[a, b]| min_seq_len_rec((*a).clone(), (*b).clone(), level, &mut maps))
                 .sum::<usize>()
         )

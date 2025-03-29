@@ -1,4 +1,8 @@
+use std::time::Instant;
+
 fn main() {
+    let now = Instant::now();
+
     println!("Day 1");
     println!("  Part 1");
     days::day01::part1();
@@ -149,4 +153,8 @@ fn main() {
     days::day25::part1();
     println!("  Part 2 - Just had to get all other 49 stars");
     println!();
+
+    let elapsed = now.elapsed();
+    println!("Executing all puzzles took: {} μs (~{} ms)", elapsed.as_micros(), elapsed.as_millis());
 }
+

@@ -123,6 +123,13 @@ fn main() {
     days::day19::part2();
     println!();
 
+    println!("Day 20");
+    println!("  Part 1");
+    days::day20::part1();
+    println!("  Part 2");
+    days::day20::part2();
+    println!();
+
     println!("Day 21");
     println!("  Part 1");
     days::day21::part1();

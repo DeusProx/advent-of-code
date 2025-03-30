@@ -148,6 +148,13 @@ fn main() {
     days::day22::part2();
     println!();
 
+    println!("Day 23");
+    println!("  Part 1");
+    days::day23::part1();
+    println!("  Part 2");
+    days::day23::part2();
+    println!();
+
     println!("Day 24");
     println!("  Part 1");
     days::day24::part1();

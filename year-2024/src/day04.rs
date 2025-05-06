@@ -174,25 +174,24 @@ fn part1() -> usize {
     let input = std::fs::read_to_string("../data/2024/day/4/input").expect("Cannot read input");
     let width = input.find('\n').unwrap() + 1;
     let input: Vec<char> = input.chars().collect();
-    println!("W: {}", width);
 
     input.iter().enumerate()
         .filter(|&(_, &c)| c == 'X')
-        .map(|(index, _)|
+        .map(|(index, _)| {
             [
-                input.get(index - 3..index).is_some_and(|seq| seq.eq(&SAM)),
-                input.get(index + 1..index + 4).is_some_and(|seq| seq.eq(&MAS)),
-                input.get(index - 3 * width..index).is_some_and(|seq| seq.iter().step_by(width).eq(&SAM)),
-                input.get(index + width..index + 3 * width + 1).is_some_and(|seq| seq.iter().step_by(width).eq(&MAS)),
-                input.get(index - 3 * width - 3..index).is_some_and(|seq| seq.iter().step_by(width + 1).eq(&SAM)),
-                input.get(index - 3 * width + 3..index).is_some_and(|seq| seq.iter().step_by(width - 1).eq(&SAM)),
-                input.get(index + width + 1..index + 3 * width + 4).is_some_and(|seq| seq.iter().step_by(width + 1).eq(&MAS)),
-                input.get(index + width - 1..index + 3 * width - 2).is_some_and(|seq| seq.iter().step_by(width - 1).eq(&MAS)),
+                input.get(index.wrapping_sub(3)..index).is_some_and(|seq| seq.eq(&SAM)),                                          // 
+                input.get(index + 1..index + 4).is_some_and(|seq| seq.eq(&MAS)),                                                  //
+                input.get(index.wrapping_sub(3 * width)..index).is_some_and(|seq| seq.iter().step_by(width).eq(&SAM)),            //
+                input.get(index + width..index + 3 * width + 1).is_some_and(|seq| seq.iter().step_by(width).eq(&MAS)),            //
+                input.get(index.wrapping_sub(3 + 3 * width)..index).is_some_and(|seq| seq.iter().step_by(width + 1).eq(&SAM)),    //
+                input.get((index + 3).wrapping_sub(3 * width)..index).is_some_and(|seq| seq.iter().step_by(width - 1).eq(&SAM)),  //
+                input.get(index + width + 1..index + 3 * width + 4).is_some_and(|seq| seq.iter().step_by(width + 1).eq(&MAS)),    //
+                input.get(index + width - 1..index + 3 * width - 2).is_some_and(|seq| seq.iter().step_by(width - 1).eq(&MAS)),    //
             ]
                 .iter()
                 .filter(|a| **a)
                 .count()
-        )
+        })
         .sum()
 }
 
@@ -221,4 +220,5 @@ fn part2() -> usize {
         )
         .count()
 }
+
 

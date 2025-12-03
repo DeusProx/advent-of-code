@@ -5,7 +5,6 @@ use rayon::prelude::*;
 #[aoc_macro::bench()]
 pub fn part1() -> u64 {
     // TODO: Solve with macro
-    // let input = std::fs::read_to_string("../data/2025/day/2/test").expect("Cannot read input");
     let input = std::fs::read_to_string("../data/2025/day/2/input").expect("Cannot read input");
 
     input.split(',')
@@ -32,7 +31,6 @@ pub fn part1() -> u64 {
 #[aoc_macro::bench()]
 pub fn part2() -> u64 {
     // TODO: Solve with macro
-    // let input = std::fs::read_to_string("../data/2025/day/2/test").expect("Cannot read input");
     let input = std::fs::read_to_string("../data/2025/day/2/input").expect("Cannot read input");
 
     input.split(',')

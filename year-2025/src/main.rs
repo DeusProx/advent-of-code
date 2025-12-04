@@ -24,6 +24,13 @@ fn main() {
     days::day03::part2();
     println!();
 
+    println!("Day 4");
+    println!("  Part 1");
+    days::day04::part1();
+    println!("  Part 2");
+    days::day04::part2();
+    println!();
+
     let elapsed = now.elapsed();
     println!("Executing all puzzles took: {} μs (~{} ms)", elapsed.as_micros(), elapsed.as_millis());
 }

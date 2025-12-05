@@ -38,16 +38,16 @@ pub fn part2() -> usize {
         .fold(
             (Vec::with_capacity(fresh.len() + 1), first),
             |(mut acc, (a2, b2)), &(a1, b1)| { // do not forget that we reversed the data
-                if b1 < a2 {
+                if b1 < a2 { // no overlap
                     acc.push((a2, b2));
                     return (acc, (a1, b1))
                 }
 
-                if b1 <= b2 {
+                if b1 <= b2 { // overlap
                     return (acc, (a1, b2));
                 }
 
-                (acc, (a1, b1))
+                (acc, (a1, b1)) // new range includes old one
             }
         );
 

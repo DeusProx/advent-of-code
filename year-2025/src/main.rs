@@ -73,6 +73,13 @@ fn main() {
     days::day10::part2();
     println!();
 
+    println!("Day 11");
+    println!("  Part 1");
+    days::day11::part1();
+    println!("  Part 2");
+    days::day11::part2();
+    println!();
+
     let elapsed = now.elapsed();
     println!("Executing all puzzles took: {} μs (~{} ms)", elapsed.as_micros(), elapsed.as_millis());
 }
